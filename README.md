@@ -9,8 +9,6 @@
 ## Grunt Task ##
 * grunt clear: Remove build directory
 * grunt build: Create the project into build folder
-* grunt imgmin: Compress images
-* grunt imgminFast: Compress images only if it is necesary
 * grunt buildFast: Create the project into build folder fast
 * grunt test: Test the js and less files
 * grunt run: Run prject on server
