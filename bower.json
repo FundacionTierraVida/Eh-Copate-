@@ -1,0 +1,17 @@
+{
+  "name": "Eh_Copate",
+  "version": "1.0.0",
+  "authors": [
+    "Jose-PC <jobregon@fundaciontierravida.org>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "3.0.1",
+    "jquery": "2.1.4"
+  }
+}
