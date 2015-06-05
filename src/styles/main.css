@@ -1,6 +1,6 @@
-body {
-	background-color: #FFDFAE;
+html, body {
 	font-family: sans-serif;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -12,7 +12,7 @@ body {
 	color: white;
 	cursor: pointer;
 	font-size: 16px;
-	margin: 15px calc(50% - 73px) 0 calc(50% - 137px);
+	margin: 15px calc(50% - 73px) 0 calc(50% - 172px);
 	position: absolute;
 	width: 162px;
 	text-align: center;
@@ -57,6 +57,72 @@ body {
 	position: absolute;
 }
 
+.info-section {
+	display: inline-block;
+	margin-top: 50px;
+	height: 70px;
+	width: 33.33%;
+	float: left;
+	border: solid 1px;
+}
+
+.project {
+	background-color: #42B549;
+}
+
+.young {
+	background-color: #4295B9;
+}
+
+.followers {
+	background-color: #F05C68;
+}
+
+.info-text {
+	padding: 20px;
+	font-size: 24px;
+	text-align: center;
+}
+
+.wrapper-box {
+	margin-top: 120px;
+	width: 100%;
+	height: 90%;
+	overflow: auto;
+}
+
+.box {
+	background-color: #8AB15C;
+	display: inline-block;
+	height: 35%;
+	margin: 45px;
+	width: 25%;
+	overflow: hidden;
+	border: solid 1px;
+	-webkit-box-shadow: -15px -13px 25px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -15px -13px 25px -1px rgba(0,0,0,0.75);
+	box-shadow: -15px -13px 25px -1px rgba(0,0,0,0.75);
+}
+
+.box:hover {
+	background-color: #9AC16C;
+	cursor: pointer;
+}
+
+.box-title {
+	text-align: center;
+	font-weight: bold;
+}
+
+.box-sub-title {
+	text-align: center;
+}
+
+.box-description {
+	padding: 10px;
+	text-align: center;
+}
+
 @media (max-width: 767px) {
 
 	.navbar-title {
@@ -65,6 +131,14 @@ body {
 
 	.navbar-right .dropdown.open .dropdown-menu li a {
 		color: white;
+	}
+
+	.info-text {
+		font-size: 18px;
+		padding: 25px;
+		overflow:hidden;
+	    white-space:nowrap;
+	    text-overflow: ellipsis;
 	}
 	
 }
