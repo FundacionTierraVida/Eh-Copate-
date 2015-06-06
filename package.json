@@ -1,35 +1,10 @@
 {
-  "name": "Eh_Copate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "ehcopate",
+  "version": "0.0.1",
+  "description": "app based in MEAN stack",
+  "main": "server.js",
   "dependencies": {
-    "grunt": "^0.4.5"
-  },
-  "devDependencies": {
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-csslint": "^0.4.0",
-    "grunt-contrib-htmlmin": "^0.4.0",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-less": "^1.0.1",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-http-server": "^1.4.0",
-    "grunt-jsbeautifier": "^0.2.10",
-    "grunt-lesslint": "^1.1.14",
-    "grunt-newer": "^1.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/FundacionTierraVida/Eh-Copate-.git"
-  },
-  "keywords": [
-    "grunt"
-  ],
-  "author": "ftv",
-  "license": "ISC"
+      "express": "~3.x",
+      "mongoose": "latest"
+  }
 }

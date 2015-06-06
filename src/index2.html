@@ -1,0 +1,183 @@
+<!doctype html>  
+<html lang="en" ng-app="ehCopate">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="TierraVida Fundation">
+    <link rel="shortcut icon" href="img/ftv_icono.png">
+    <title>EhCopate</title>
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+</head>
+
+<body>
+
+<!-- container-page -->
+<div class="container-page">
+        
+    <!-- NavbarHeader -->
+    <nav class='navbar navbar-default navbar-inverse navbar-fixed-top' role='navigation'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' href='#'>
+                <img class='EC-icono' src='img/tierravida.png'>
+            </a>
+            <span id='selected-category'></span>
+        </div>
+        <a class='navbar-title' href='javascript:location.reload()'>Eh! Copate!</a>
+        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+            <ul class='nav navbar-nav navbar-right'>
+                <li class='dropdown'>
+                    <a href='#' class='dropdown-toggle item-bar' data-toggle='dropdown'>
+                        <img src='img/notifications_white.png'>
+                    </a>
+                    <ul class='dropdown-menu'>
+                        <li>
+                            <a href='#'>Tienes un nuevo seguidor!</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='dropdown'>
+                    <a href='#' class='dropdown-toggle item-bar' data-toggle='dropdown'>Menú</a>
+                    <ul class='dropdown-menu'>
+                        <li><a href='#' data-toggle='modal' data-target='#loginModal'>Cerrar sesión</a></li>
+                        <li><a href='#'>Ayuda</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-controller="mainController">
+
+        <!-- infobar -->
+        <div class="wrapper-info-section">
+            <div class="info-section project">
+                <div class="info-text">
+                    {{ projects.length }} Proyectos
+                </div>
+            </div>
+            <div class="info-section young">
+                <div class="info-text">
+                    68 Jovenes
+                </div>
+            </div>
+            <div class="info-section followers">
+                <div class="info-text">
+                    46 Seguidores
+                </div>
+            </div>
+        </div>
+
+         <!--Form to insert new project -->           
+         <div id="project-form" class="row clearfix">
+            <div class="wrapper-form col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Insert School name" ng-model="formData.nameSchool">
+                        <br>
+                        <input type="text" class="form-control input-lg text-center" placeholder="Insert Project name" ng-model="formData.nameProject">
+                        <br>
+                        <input type="text" class="form-control input-lg text-center" placeholder="Insert Project Description" ng-model="formData.projectDescription">
+                    </div>
+                    <button class="btn btn-warning btn-lg" ng-click="createProject()">Insert</button>
+                </form>
+            </div>
+        </div>
+
+        <br>
+        
+        <!--Project List-->
+        <div class="wrapper-boxes-2">
+            <div class="col-md-4 column" ng-repeat="project in projects">
+                <a class="link-box" href="#" data-toggle='modal' data-target='.perfil-modal'>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                        <h3 class="panel-title">School: {{ project.nameSchool }}</h3>
+                        </div>
+                        <div class="panel-body">
+                        <h4>Project: {{ project.nameProject }}</h4>
+                        <h4>Description: {{ project.projectDescription }}</h4>
+                        </div>
+                        <div class="panel-footer">
+                        <button class="btn btn-danger btn-lg" ng-click="deleteProject(project._id)">Delete</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--     <div class="modal fade perfil-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Nombre de la escuela</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Nombre del proyecto</h4>
+                    <h5>Indicador</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--login modal-->
+<!--     <div id="loginModal" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h1 class="text-center">Login</h1>
+          </div>
+          <div class="modal-body">
+              <form class="form col-md-12 center-block">
+                <div class="form-group">
+                  <input type="text" class="form-control input-lg" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control input-lg" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+                  <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <div class="col-md-12">
+              <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+              </div>    
+          </div>
+      </div>
+      </div>
+    </div> -->
+
+    <!-- jquery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

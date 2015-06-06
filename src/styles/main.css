@@ -1,144 +1,188 @@
-html, body {
+body {
+	background-color: white;
 	font-family: sans-serif;
-	height: 100%;
-	overflow: hidden;
 }
 
+span {
+	cursor: default;
+}
+
+/*//////////////////////////////////////////////////////*/
+
+.container-page {
+
+}
+
+/*//////////////////////////////////////////////////////*/
 .navbar-inverse {
-	background-color: #026AAA;
+  background-color: #026AAA;
 }
 
 .navbar-title {
-	color: white;
-	cursor: pointer;
-	font-size: 16px;
-	margin: 15px calc(50% - 73px) 0 calc(50% - 172px);
-	position: absolute;
-	width: 162px;
-	text-align: center;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 15px calc(50% - 73px) 0 calc(50% - 172px);
+  position: absolute;
+  width: 162px;
+  text-align: center;
 }
 
 .navbar-title:hover {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .navbar-right li a.item-bar {
-	border-radius: 10px;
-	color: white;
-	margin: 10px 10px 0 5px;
-	padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px 10px 0 5px;
+  padding: 5px 5px 5px 5px;
 }
 .navbar-right li a.item-bar:hover {
-	background-color: #0254AB;
+  background-color: #0254AB;
 }
 
 .dropdown ul.dropdown-menu {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .dropdown.open .dropdown-toggle.item-bar:first-child {
-	background-color: #0254AB;
+  background-color: #0254AB;
 }
 
 .navbar-brand {
-	margin: 5px 10px 5px 5px;
-	padding: 0;
+  margin: 5px 10px 5px 5px;
+  padding: 0;
 }
 
 .EC-icono {
-	height: 40px;
+  height: 40px;
 }
 
 #navigation-bar .navbar-inverse .navbar-header .selected-category {
-	color: white;
-	font-size: 16px;
-	margin: 15px 0 0 15px;
-	position: absolute;
+  color: white;
+  font-size: 16px;
+  margin: 15px 0 0 15px;
+  position: absolute;
+}
+
+/*//////////////////////////////////////////////////////*/
+
+.wrapper-info-section {
+  margin-left: 6px;
+}
+
+.wrapper-form {
+  margin-top: 60px;
 }
 
 .info-section {
-	display: inline-block;
-	margin-top: 50px;
-	height: 70px;
-	width: 33.33%;
-	float: left;
-	border: solid 1px;
+  display: inline-block;
+  margin: 56px 0.1% 0 0.1%;
+  border-radius: 5px;
+  height: 70px;
+  width: 33%;
+  float: left;
 }
 
 .project {
-	background-color: #42B549;
+  background-color: #42B549;
 }
 
 .young {
-	background-color: #4295B9;
+  background-color: #4295B9;
 }
 
 .followers {
-	background-color: #F05C68;
+  background-color: #F05C68;
+}
+
+.wrapper-boxes {
+  margin-top: 150px;
+}
+
+.wrapper-boxes-2 {
+  margin-top: 40px;
+}
+
+.link-box {
+  text-decoration: none !important;
+  color: black !important;
 }
 
 .info-text {
-	padding: 20px;
-	font-size: 24px;
-	text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
 }
 
-.wrapper-box {
-	margin-top: 120px;
-	width: 100%;
-	height: 90%;
-	overflow: auto;
+.label-info {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 
-.box {
-	background-color: #8AB15C;
-	display: inline-block;
-	height: 35%;
-	margin: 45px;
-	width: 25%;
-	overflow: hidden;
-	border: solid 1px;
-	-webkit-box-shadow: -15px -13px 25px -1px rgba(0,0,0,0.75);
-	-moz-box-shadow: -15px -13px 25px -1px rgba(0,0,0,0.75);
-	box-shadow: -15px -13px 25px -1px rgba(0,0,0,0.75);
+.modal-title {
+  text-align: center;
 }
 
-.box:hover {
-	background-color: #9AC16C;
-	cursor: pointer;
+
+/*//////////////////////////////////////////////////////*/
+
+.panel-success {
+  border: solid 2px #d6e9c6;
+  max-height: 400px;
+  overflow:hidden !important;
+  min-height: 400px;
 }
 
-.box-title {
-	text-align: center;
-	font-weight: bold;
+.panel-body {
+  overflow:hidden !important;
+  max-height: 200px;
+  min-height: 300px;
 }
 
-.box-sub-title {
-	text-align: center;
+.link-button-login {
+  text-decoration: none !important;
+  color: black;
 }
 
-.box-description {
-	padding: 10px;
-	text-align: center;
+.link-button-login:hover {
+  text-decoration: none !important;
+  color: black;
+}
+
+.panel-success:hover {
+  border: solid 2px #73a839;
+}
+
+.panel-success .panel-heading {
+  color: #468847;
+  background-color: #73a839;
+  border-color: #dddddd;
+}
+
+.panel-title {
+  color: white;
+  /*text-align: center;*/
 }
 
 @media (max-width: 767px) {
 
-	.navbar-title {
-		display: none;
-	}
+  .info-text {
+    font-size: 18px;
+    padding: 25px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+  }
 
-	.navbar-right .dropdown.open .dropdown-menu li a {
-		color: white;
-	}
+  .navbar-title {
+    display: none;
+  }
 
-	.info-text {
-		font-size: 18px;
-		padding: 25px;
-		overflow:hidden;
-	    white-space:nowrap;
-	    text-overflow: ellipsis;
-	}
-	
+  .navbar-right .dropdown.open .dropdown-menu li a {
+    color: white;
+  }
+  
 }
