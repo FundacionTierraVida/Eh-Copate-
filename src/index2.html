@@ -47,8 +47,8 @@
                 <li class='dropdown'>
                     <a href='#' class='dropdown-toggle item-bar' data-toggle='dropdown'>Menú</a>
                     <ul class='dropdown-menu'>
-                        <li><a href='#' data-toggle='modal' data-target='#loginModal'>Cerrar sesión</a></li>
-                        <li><a href='#'>Ayuda</a></li>
+                        <li><a href='index.html'>Cerrar sesión</a></li>
+                        <li><a href='#' data-toggle='modal' data-target='.help-modal'>Ayuda</a></li>
                     </ul>
                 </li>
             </ul>
@@ -81,13 +81,13 @@
             <div class="wrapper-form col-sm-8 col-sm-offset-2 text-center">
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control input-lg text-center" placeholder="Insert School name" ng-model="formData.nameSchool">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Nombre de la escuela" ng-model="formData.nameSchool">
                         <br>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Insert Project name" ng-model="formData.nameProject">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Nombre del proyecto" ng-model="formData.nameProject">
                         <br>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Insert Project Description" ng-model="formData.projectDescription">
+                        <textarea id="textArea" maxlength="600" type="text" class="form-control input-lg text-center" placeholder="Descripción" ng-model="formData.projectDescription"></textarea>
                     </div>
-                    <button class="btn btn-warning btn-lg" ng-click="createProject()">Insert</button>
+                    <button class="btn btn-warning btn-lg" ng-click="createProject()">Crear</button>
                 </form>
             </div>
         </div>
@@ -100,17 +100,35 @@
                 <a class="link-box" href="#" data-toggle='modal' data-target='.perfil-modal'>
                     <div class="panel panel-success">
                         <div class="panel-heading">
-                        <h3 class="panel-title">School: {{ project.nameSchool }}</h3>
+                        <h3 class="panel-title">Escuela: {{ project.nameSchool }}</h3>
                         </div>
                         <div class="panel-body">
-                        <h4>Project: {{ project.nameProject }}</h4>
-                        <h4>Description: {{ project.projectDescription }}</h4>
+                        <h4>Proyecto: {{ project.nameProject }}</h4>
+                        <p>Descripción: {{ project.projectDescription }}</p>
                         </div>
                         <div class="panel-footer">
-                        <button class="btn btn-danger btn-lg" ng-click="deleteProject(project._id)">Delete</button>
+                        <button class="btn btn-danger btn-lg" ng-click="deleteProject(project._id)">Eliminar</button>
                         </div>
                     </div>
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade help-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Ayuda</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 id="text-in-a-modal">¿Que es Eh! Copate!?</h4>
+                    <p>En TierraVida creemos que la educación es una herramienta fundamental para crear comunidades más sustentables. Es por ello que llevamos adelante este programa que busca desarrollar iniciativas dirigidas a alumnos de todos los niveles. Éstas se basan en la experiencia (“aprender haciendo”) para tomar conciencia sobre los desafíos para la sustentabilidad que los participantes identifican en su entorno inmediato. En base a la conciencia generada, los jóvenes lideran programas de acción para impactar positivamente en su comunidad.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
             </div>
         </div>
     </div>

@@ -59,7 +59,7 @@
                         <br>
                         <input type="text" class="form-control input-lg text-center" placeholder="Insert Project Description" ng-model="formData.projectDescription">
                     </div>
-                    <button class="btn btn-warning btn-lg" ng-click="createProject()">Insert</button>
+                    <button class="btn btn-warning btn-lg" ng-click="createProject()">Crear</button>
                 </form>
             </div>
         </div> -->
@@ -69,14 +69,14 @@
         <!--Project List-->
         <div class="wrapper-boxes">
             <div class="col-md-4 column" ng-repeat="project in projects">
-                <a class="link-box" href="#" data-toggle='modal' data-target='.perfil-modal'>
+                <a class="link-box" href="#" data-toggle='modal' data-target='.view-more-modal'>
                     <div class="panel panel-success">
                         <div class="panel-heading">
-                        <h3 class="panel-title">School: {{ project.nameSchool }}</h3>
+                        <h3 class="panel-title">Escuela: {{ project.nameSchool }}</h3>
                         </div>
                         <div class="panel-body">
-                        <h4>Project: {{ project.nameProject }}</h4>
-                        <p>Description: {{ project.projectDescription }}</p>
+                        <h4>Proyecto: {{ project.nameProject }}</h4>
+                        <p>Descripción: {{ project.projectDescription }}</p>
                         </div>
                         <!-- <div class="panel-footer">
                         <button class="btn btn-danger btn-lg" ng-click="deleteProject(project._id)">Delete</button>
@@ -89,7 +89,7 @@
 
 </div>
 
-    <div class="modal fade perfil-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade view-more-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -114,7 +114,7 @@
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h1 class="text-center">Login</h1>
+              <h1 class="text-center">Iniciar sesión</h1>
           </div>
           <div class="modal-body">
               <form class="form col-md-12 center-block">
@@ -125,18 +125,36 @@
                   <input type="password" class="form-control input-lg" placeholder="Password">
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-primary btn-lg btn-block"><a class="link-button-login" href="index2.html">Sign In</a></button>
-                  <span class="pull-right"><a>Register</a></span><span><a href="#">Need help?</a></span>
+                  <button class="btn btn-primary btn-lg btn-block"><a class="link-button-login" href="index2.html">Ingresar</a></button>
+                  <span class="pull-right"><a>Registrarse</a></span><span><a href="#">ayuda</a></span>
                 </div>
               </form>
           </div>
           <div class="modal-footer">
               <div class="col-md-12">
-              <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+              <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
               </div>    
           </div>
       </div>
       </div>
+    </div>
+
+    <div class="modal fade help-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Ayuda</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 id="text-in-a-modal">¿Que es Eh! Copate!?</h4>
+                    <p>En TierraVida creemos que la educación es una herramienta fundamental para crear comunidades más sustentables. Es por ello que llevamos adelante este programa que busca desarrollar iniciativas dirigidas a alumnos de todos los niveles. Éstas se basan en la experiencia (“aprender haciendo”) para tomar conciencia sobre los desafíos para la sustentabilidad que los participantes identifican en su entorno inmediato. En base a la conciencia generada, los jóvenes lideran programas de acción para impactar positivamente en su comunidad.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- jquery -->

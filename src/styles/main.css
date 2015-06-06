@@ -152,6 +152,12 @@ span {
   color: black;
 }
 
+#textArea {
+  width: 100%;
+  max-width: 100%;
+  max-height: 300px;
+}
+
 .panel-success:hover {
   border: solid 2px #73a839;
 }
@@ -160,6 +166,8 @@ span {
   color: #468847;
   background-color: #73a839;
   border-color: #dddddd;
+  overflow:hidden !important;
+  white-space: nowrap;
 }
 
 .panel-title {
@@ -184,5 +192,26 @@ span {
   .navbar-right .dropdown.open .dropdown-menu li a {
     color: white;
   }
+
+  .wrapper-form {
+    margin-top: 160px;
+  }
+  
+}
+
+@media (max-width: 992px) {
+
+.panel-success {
+  border: solid 2px #d6e9c6;
+  max-height: 300px;
+  overflow:hidden !important;
+  min-height: 300px;
+}
+
+.panel-body {
+  overflow:hidden !important;
+  max-height: 100px;
+  min-height: 200px;
+}
   
 }
